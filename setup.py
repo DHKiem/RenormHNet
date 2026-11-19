@@ -39,7 +39,7 @@ setup(
             "deeph-evaluate = renormhnet.scripts.evaluate:main",
             "deeph-inference = renormhnet.scripts.inference:main",
             "inference-jx = renormhnet.scripts.inference_jx:main",
-
+            "jxbinder = renormhnet.scripts.jxbinder:main",
         ]
     },
     install_requires=[
@@ -55,7 +55,8 @@ setup(
         "tqdm",
         "tensorboard",
         "pandas",
-        "matplotlib"
+        "matplotlib",
+        "tomli; python_version < '3.11'",
     ],
     license="LGPL-3.0",
     license_files="LICENSE",
