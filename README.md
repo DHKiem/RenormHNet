@@ -62,7 +62,7 @@ export PATH="$PATH:${JULIAPATH}/bin"
 ```
 where ${JULIAPATH} is the directory where Julia was extracted. 
 
-We recommend creating a dedicated Julia project environment for RenormHNet using ``julia --project=${JULIA_PROJECT_PATH}``.
+**Tip:** You can create a dedicated Julia project environment for RenormHNet using ``julia --project=${JULIA_PROJECT_PATH}``. If you use a dedicated environment, set ``julia_interpreter = julia --project=${JULIA_PROJECT_PATH}`` in the configuration files (See Usage section). 
 
 Start ``Julia`` using the command above, then type `]` to enter the Pkg REPL. 
 
@@ -79,7 +79,7 @@ julia install.jl
 ```
 
 ## DFT package
-[OpenMX3.9](http://www.openmx-square.org/download.html) is currently the only supported DFT package.  
+[OpenMX3.9](http://www.openmx-square.org/download.html) is currently supported.  
 As in DeepH-pack, the overlap-only version of OpenMX is also required; install it from its [repository](https://github.com/mzjb/overlap-only-OpenMX).
 
 ## Install RenormHNet
@@ -190,6 +190,9 @@ Task ``5`` plots the exchange couplings a function of distance and saves the fig
 
 ## Test run
 Before running the script, activate the ``renormhnet`` Conda environment and ensure that the required Julia environment is configured.  
+
+If you use a dedicated Julia project environment, set `julia_interpreter = julia --project=${JULIA_PROJECT_PATH}` in the example configuration files. Replace `${JULIA_PROJECT_PATH}` with the actual path to your Julia project environment.
+
 To verify that the code work, run the example test script from the RenormHNet repository root:
 ```bash
 cd example
@@ -198,7 +201,9 @@ cd example
 
 The ``example`` directory contains output from two DFT calculations, along with input files for preprocessing, traning, and inference in the ``preprocess``, ``train``, ``inference`` directories.  
 
+## Dataset
 
+The dataset for the paper "Machine-Learning Spin-Fermion Models for Strongly Disordered Magnets: Sb-Doped MnTe" can be found at [Zenodo repository](https://doi.org/10.5281/zenodo.24406792). You can have OpenMX input files and the trained model. 
 
 # Contributors
 ### Do Hoon Kiem
