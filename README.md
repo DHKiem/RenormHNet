@@ -136,8 +136,30 @@ Training follows the same procedure as in DeepH-pack:
 ```
 deeph-train --config train.ini
 ```
-### Training cutoff radius and weight
+### Training cutoff radius and loss weight
+Two radius parameters control the training loss. 
+Note that ``radius`` specifies the cutoff distance for graph contruction during preprocessing. ``radius`` key isn't used for training.  
 
+RenormHNet supports a training cutoff radius (``train_cutoff``) and a loss-weighting radius (``weight_radius``). 
+
+Exchange couplings at distances greater than the cutoff radius $R_\textrm{cutoff}$ do not contribute to the loss function. 
+The training cutoff radius should satisfy $R_\textrm{cutoff} < R_\textrm{graph}$. 
+
+The loss-weighting radius $R_\textrm{weight}$ controls the distance-dependent loss weighting. For distances greater than the weight radius, loss contributions are multiplied by ``weight_outer``. 
+
+Set the following parameters in the [train] section:
+```
+[train]
+train_cutoff = 5
+weight_radius = 4
+weight_outer = 0.7
+```
+
+To use the weighted loss function, set the following in the `[hyperparameter]` section:
+```
+criterion = LengthWeightMaskMSELoss
+```
+Otherwise, use the default setting, ``criterion = MaskMSELoss``
 
 
 ### Tracking the training log
