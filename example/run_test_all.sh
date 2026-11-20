@@ -4,6 +4,8 @@ BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+printf "${RED}This script runs for a test calculation. If you want to get a reliable result, more data are required.${NC} \n"
+
 printf "${BLUE}Example data are stored at dft ${NC} \n"
 printf "${BLUE} tar -zxvf dft.tar.gz ${NC} \n"
 tar -zxvf dft.tar.gz

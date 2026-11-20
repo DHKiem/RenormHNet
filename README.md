@@ -5,14 +5,14 @@ RenormHNet (**renorm**alized **H**amiltonian neural **net**work) is the code acc
 This code is built as a patch to [DeepH-pack](https://github.com/mzjb/DeepH-pack.git), 
 and retains its original workflow. Installation and usage are nearly identical. 
 
-RenormHNet extends DeepH from full DFT Hamiltonians to renormalized, low-energy Hamiltonians. The examples learn Heisenberg spin Hamiltonians from [Jx](https://kaist-elst.github.io/Jx.jl/) and [OpenMX](http://www.openmx-square.org/). Given training data in the same format, the code also applies directly to other bilinear renormalized Hamiltonians, such; as electronic Wannier, force-constant or exciton Hamiltonains.  
+RenormHNet extends DeepH from full DFT Hamiltonians to renormalized, low-energy Hamiltonians. The examples learn Heisenberg spin Hamiltonians from [Jx](https://kaist-elst.github.io/Jx.jl/) and [OpenMX](http://www.openmx-square.org/). Given training data in the same format, the code also applies directly to other bilinear renormalized Hamiltonians, such as electronic Wannier, force-constant or exciton Hamiltonains.  
 
 
 # Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Contributors](#contributors)
-4. [howtocite](#how-to-cite)
+4. [How to cite](#how-to-cite)
 
 
 # Installation
