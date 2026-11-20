@@ -1,0 +1,1 @@
+inference-jx --config inference.ini
