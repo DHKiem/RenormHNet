@@ -5,16 +5,14 @@ RenormHNet (**renorm**alized **H**amiltonian neural **net**work) is the code acc
 This code is built as a patch to [DeepH-pack](https://github.com/mzjb/DeepH-pack.git), 
 and retains its original workflow. Installation and usage are nearly identical. 
 
-The code extends the DeepH framework to spin Hamiltonians with Heisenberg-type exchange 
-couplings obtained from [Jx](https://kaist-elst.github.io/Jx.jl/). 
-The currently supported DFT package is [OpenMX](http://www.openmx-square.org/). 
+RenormHNet extends DeepH from full DFT Hamiltonians to renormalized, low-energy Hamiltonians. The examples learn Heisenberg spin Hamiltonians from [Jx](https://kaist-elst.github.io/Jx.jl/) and [OpenMX](http://www.openmx-square.org/). Given training data in the same format, the code also applies directly to other bilinear renormalized Hamiltonians, such; as electronic Wannier, force-constant or exciton Hamiltonains.  
 
 
 # Contents
 1. [Installation](#installation)
-1. [Usage](#usage)
-1. [Contributors](#contributors)
-1. [howtocite](#how-to-cite)
+2. [Usage](#usage)
+3. [Contributors](#contributors)
+4. [howtocite](#how-to-cite)
 
 
 # Installation
@@ -189,3 +187,21 @@ Tasks 1–4 correspond to the same steps as in DeepH-pack. Task ``1`` parses the
 Task ``4`` also exports the results from the HDF5 file to ``Hamiltonian.csv``. 
 Task ``5`` plots the exchange couplings a function of distance and saves the figure as ``jx_plot.png``. 
 
+
+## Test run
+Before running the script, activate the ``renormhnet`` Conda environment and ensure that the required Julia environment is configured.  
+To verify that the code work, run the example test script from the RenormHNet repository root:
+```bash
+cd example
+./run_test_all.sh
+```
+
+The ``example`` directory contains output from two DFT calculations, along with input files for preprocessing, traning, and inference in the ``preprocess``, ``train``, ``inference`` directories.  
+
+
+
+# Contributors
+### Do Hoon Kiem
+### Tom Berlijn
+
+# How to cite
