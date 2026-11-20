@@ -150,7 +150,7 @@ def save_model(state, model_dict, model_state_dict, path, is_best):
     if 'verbose' in list(signature(package.PackageExporter.__init__).parameters.keys()):
         package_dict['verbose'] = False
     with package.PackageExporter(model_dir, **package_dict) as exp:
-        exp.intern('renornhnet.**')
+        exp.intern('renormhnet.**')
         exp.extern([
             'scipy.**', 'numpy.**', 'torch_geometric.**', 'sklearn.**',
             'torch_scatter.**', 'torch_sparse.**', 'torch_sparse.**', 'torch_cluster.**', 'torch_spline_conv.**',
