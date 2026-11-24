@@ -27,7 +27,6 @@ setup(
     version=get_version("renormhnet/__init__.py"),
     description="RenormHNet: Renormalization of Hamiltonian network currently supports Heisenberg exchange (Jx) Hamiltonians.",
     download_url="https://github.com/DHKiem/RenormHNet",
-    author="He Li (DeepH-pack); Do Hoon Kiem (RenormHNet)",
     python_requires=">=3.9",
     packages=find_packages(),
     package_dir={'renormhnet': 'renormhnet'},
